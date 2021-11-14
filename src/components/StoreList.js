@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
+
 import { stores } from "../data";
+
 import StoreItem from "./StoreItem";
 
 function StoreList() {

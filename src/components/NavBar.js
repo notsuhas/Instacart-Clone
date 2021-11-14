@@ -1,24 +1,44 @@
+import { useState, useRef, useEffect } from "react";
+
 import { ReactComponent as Logo } from "../logo.svg";
+import { ReactComponent as USFlag } from "../assets/svg/USFlag.svg";
+import { ReactComponent as CAFlag } from "../assets/svg/CAFlag.svg";
+import { ReactComponent as Bars } from "../assets/svg/Bars.svg";
+import { ReactComponent as Close } from "../assets/svg/Close.svg";
 
 function NavBar() {
+	const [showMenu, setShowMenu] = useState(false);
+
+	const linksContainerRef = useRef(null);
+	const linksRef = useRef(null);
+
+	const toggleLinks = () => {
+		setShowMenu(!showMenu);
+	};
+
+	const [country, setCountry] = useState(true);
+
+	const changeCountry = (newCountry) => {
+		setCountry(newCountry);
+	};
+
+	// useEffect(() => {
+	// 	if (showMenu) {
+	// 		linksContainerRef.current.style.height = `${90}px`;
+	// 	} else {
+	// 		linksContainerRef.current.style.height = "0px";
+	// 	}
+	// }, [showMenu]);
+
 	return (
 		<div className="block">
-			<nav className="flex flex-row items-center justify-center p-3 mb-4 bg-white border-b shadow-md md:justify-between md:px-10 md:py-6 max-h-20">
-				<button className="flex justify-start border-none bg-none">
-					<svg
-						width="24"
-						height="24"
-						viewBox="0 0 24 24"
-						fill="#343538"
-						xmlns="http://www.w3.org/2000/svg"
-						size="24">
-						<path
-							fillRule="evenodd"
-							clipRule="evenodd"
-							d="M18.8 17.5c.939 0 1.7.672 1.7 1.5s-.761 1.5-1.7 1.5H5.2c-.939 0-1.7-.672-1.7-1.5s.761-1.5 1.7-1.5h13.6zm0-7c.939 0 1.7.672 1.7 1.5s-.761 1.5-1.7 1.5H5.2c-.939 0-1.7-.672-1.7-1.5s.761-1.5 1.7-1.5h13.6zm0-7c.939 0 1.7.672 1.7 1.5s-.761 1.5-1.7 1.5H5.2c-.939 0-1.7-.672-1.7-1.5s.761-1.5 1.7-1.5h13.6z"></path>
-					</svg>
+			<nav className="flex flex-row items-center justify-center p-3 bg-white border-b shadow-md md:justify-between md:px-10 md:py-6 max-h-20">
+				<button
+					onClick={(e) => toggleLinks(e.target.value)}
+					className="md:hidden flex justify-start border-none bg-none">
+					{showMenu ? <Close /> : <Bars />}
 				</button>
-				<div className="flex flex-row items-center justify-center w-full">
+				<div className="flex flex-row items-center justify-center md:justify-start w-full">
 					<div className="border-none md:border-r md:pr-6">
 						<a href="#">
 							<Logo className="h-6 md:h-auto" />
@@ -34,8 +54,34 @@ function NavBar() {
 					</button>
 				</div>
 			</nav>
-			<div className="hidden">
-				
+			<div
+				ref={linksContainerRef}
+				className={`${showMenu ? "block" : "hidden"} md:hidden bg-white`}>
+				<div
+					ref={linksRef}
+					className="flex flex-row p-3 justify-between items-center">
+					<div className="w-full flex flex-row items-center justify-between px-4 overflow-hidden">
+						<button onClick={(e) => changeCountry(!country)} className="w-full">
+							<span className="whitespace-nowrap block">
+								<div className="text-lg font-normal text-primary flex flex-row items-center justify-between">
+									<div className="flex flex-row items-center">
+										<div className="py-[2px]">
+											{country ? (
+												<CAFlag className="w-6 h-6" />
+											) : (
+												<USFlag className="w-6 h-6" />
+											)}
+										</div>
+										<span className="text-lg text-[#343538] font-semibold ml-2">
+											{`${country ? "Canada" : "United States"}`}
+										</span>
+									</div>
+									<span>Change</span>
+								</div>
+							</span>
+						</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

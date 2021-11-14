@@ -3,7 +3,7 @@ import StatsSection from "./StatsSection";
 
 function AboutSection() {
 	return (
-		<section className="mx-auto max-w-6xl bg-white">
+		<section id="#about" className="mx-auto max-w-6xl bg-white">
 			<CarouselCards />
 			<StatsSection />
 		</section>

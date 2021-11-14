@@ -1,4 +1,4 @@
-function StoreItem({ id, title, image, subtitle }) {
+function StoreItem({ title, image, subtitle }) {
 	return (
 		<button className="flex flex-row items-center w-full px-4 py-3 text-left border-b md:py-6 md:px-0">
 			<img src={image} alt={title} className="w-12 h-12 border rounded-full" />

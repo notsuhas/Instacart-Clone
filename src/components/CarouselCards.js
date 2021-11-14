@@ -1,5 +1,6 @@
-import CarouselCard from "./CarouselCard";
 import { cards } from "../data";
+
+import CarouselCard from "./CarouselCard";
 
 function CarouselCards() {
 	return (

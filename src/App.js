@@ -2,9 +2,7 @@ import AboutSection from "./components/AboutSection";
 import BottomFooter from "./components/BottomFooter";
 import FAQ from "./components/FAQ";
 import Hero from "./components/Hero";
-// import InstaCartFooter from "./components/InstaCartFooter";
 import NavBar from "./components/NavBar";
-// import ShopperFooter from "./components/ShopperFooter";
 import StoreList from "./components/StoreList";
 
 function App() {
@@ -21,8 +19,6 @@ function App() {
 			</main>
 			<footer>
 				<div className="px-[5%] max-w-6xl m-auto text-left">
-					{/* <InstaCartFooter /> */}
-					{/* <ShopperFooter /> */}
 					<BottomFooter />
 				</div>
 			</footer>
