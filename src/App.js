@@ -7,7 +7,7 @@ import StoreList from "./components/StoreList";
 
 function App() {
 	return (
-		<div className="App font-eina font-normal bg-white text-[#343538] min-w-[320px]">
+		<div className="App transition-all ease-linear duration-300 font-eina font-normal bg-white text-[#343538] min-w-[320px]">
 			<header>
 				<NavBar />
 			</header>

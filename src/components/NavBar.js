@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 
 import { ReactComponent as Logo } from "../logo.svg";
 import { ReactComponent as USFlag } from "../assets/svg/USFlag.svg";
@@ -21,14 +21,6 @@ function NavBar() {
 	const changeCountry = (newCountry) => {
 		setCountry(newCountry);
 	};
-
-	// useEffect(() => {
-	// 	if (showMenu) {
-	// 		linksContainerRef.current.style.height = `${90}px`;
-	// 	} else {
-	// 		linksContainerRef.current.style.height = "0px";
-	// 	}
-	// }, [showMenu]);
 
 	return (
 		<div className="block">
