@@ -7,7 +7,7 @@
 **Email:** suhas.siriprole@gmail.com <br/>
 **Github-ID:** github.com/notsuhas <br/>
 
-**Original Site to Clone:** https://www.instacart.ca/ <br>
+**Original Site to Clone:** https://www.instacart.com/ <br>
 **Cloned Live Link:** https://notsuhas-instacart-clone.netlify.app/
 
 ###### This Repo was Pushed on 15th Nov, 2:20am and was made Private since the beginning to prevent Plagiarism.
