@@ -23,6 +23,7 @@
   - A Static Clone of the given website.
   - Mobile First and Responsive.
   - All Components are Pure Components to my Knowledge.
+  - Country Switching with Store Data.
   - Hosted on Netlify.
 
 - **What's NOT done ❌**
@@ -31,12 +32,8 @@
     Beyond that breakpoint website ain't that pretty.
   - Accessibility was Ignored for the sake of time.
   - The Two Footers was Ignored.
-  - Although there isn't much of State Management, <br>
-    the Country Switcher is not in sync with the Mobile NavBar. <br>
-    ContextAPI could have been used but that would be overkill for a NavElement.
   - All the Links and Buttons are Dummy.
   - Extracting repeated Tailwind Classes into utilty components, due to time.
-  - On Switching Country, the Store Data is not changed, It's a Dummy Element.
 
 - **Extra 💡**
 
