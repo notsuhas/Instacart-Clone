@@ -1,18 +1,10 @@
-import { useState } from "react";
-
 import { ReactComponent as USFlag } from "../assets/svg/USFlag.svg";
 import { ReactComponent as CAFlag } from "../assets/svg/CAFlag.svg";
 import { ReactComponent as Pin } from "../assets/svg/Pin.svg";
 import { ReactComponent as RightArrow } from "../assets/svg/RightArrow.svg";
 import { ReactComponent as Location } from "../assets/svg/Location.svg";
 
-function Hero() {
-	const [country, setCountry] = useState("US");
-
-	const changeCountry = (newCountry) => {
-		setCountry(newCountry);
-	};
-
+function Hero({ country, changeCountry }) {
 	return (
 		<section className="w-full min-h-[380px] md:min-h-[428px] relative flex justify-end md:justify-center mb-6 md:mb-8 flex-col">
 			<div className="absolute w-full h-full bg-[#DEEDD6] bg-cover bg-top md:bg-contain md:bg-no-repeat md:bg-right md:h-full md:w-full bg-hero-mb md:bg-hero-lg" />

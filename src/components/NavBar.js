@@ -6,7 +6,7 @@ import { ReactComponent as CAFlag } from "../assets/svg/CAFlag.svg";
 import { ReactComponent as Bars } from "../assets/svg/Bars.svg";
 import { ReactComponent as Close } from "../assets/svg/Close.svg";
 
-function NavBar() {
+function NavBar({ changeCountry, country }) {
 	const [showMenu, setShowMenu] = useState(false);
 
 	const linksContainerRef = useRef(null);
@@ -16,11 +16,7 @@ function NavBar() {
 		setShowMenu(!showMenu);
 	};
 
-	const [country, setCountry] = useState(true);
-
-	const changeCountry = (newCountry) => {
-		setCountry(newCountry);
-	};
+	const newCountry = country === "US" ? "CA" : "US";
 
 	return (
 		<div className="block">
@@ -53,19 +49,21 @@ function NavBar() {
 					ref={linksRef}
 					className="flex flex-row items-center justify-between p-3">
 					<div className="flex flex-row items-center justify-between w-full px-4 overflow-hidden">
-						<button onClick={(e) => changeCountry(!country)} className="w-full">
+						<button
+							onClick={(e) => changeCountry(newCountry)}
+							className="w-full">
 							<span className="block whitespace-nowrap">
 								<div className="flex flex-row items-center justify-between text-lg font-normal text-primary">
 									<div className="flex flex-row items-center">
 										<div className="py-[2px]">
-											{country ? (
+											{country === "CA" ? (
 												<CAFlag className="w-6 h-6" />
 											) : (
 												<USFlag className="w-6 h-6" />
 											)}
 										</div>
 										<span className="text-lg text-[#343538] font-semibold ml-2">
-											{`${country ? "Canada" : "United States"}`}
+											{`${country === "CA" ? "Canada" : "United States"}`}
 										</span>
 									</div>
 									<span className="transition-all hover:text-gray-500">
