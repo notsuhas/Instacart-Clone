@@ -27,10 +27,10 @@ function NavBar() {
 			<nav className="flex flex-row items-center justify-center p-3 bg-white border-b shadow-md md:justify-between md:px-10 md:py-6 max-h-20">
 				<button
 					onClick={(e) => toggleLinks(e.target.value)}
-					className="md:hidden flex justify-start border-none bg-none">
+					className="flex justify-start border-none md:hidden bg-none">
 					{showMenu ? <Close /> : <Bars />}
 				</button>
-				<div className="flex flex-row items-center justify-center md:justify-start w-full">
+				<div className="flex flex-row items-center justify-center w-full md:justify-start">
 					<div className="border-none md:border-r md:pr-6">
 						<a href="#">
 							<Logo className="h-6 md:h-auto" />
@@ -38,10 +38,10 @@ function NavBar() {
 					</div>
 				</div>
 				<div className="flex flex-row">
-					<button className="relative mr-3 text-sm font-semibold bg-white select-none md:text-lg md:mx-5 whitespace-nowrap">
+					<button className="relative mr-3 text-sm font-semibold transition-all bg-white select-none hover:text-gray-500 md:text-lg md:mx-5 whitespace-nowrap">
 						Log in
 					</button>
-					<button className="relative px-4 py-2 text-sm font-semibold text-white select-none md:text-lg rounded-3xl whitespace-nowrap bg-primary">
+					<button className="relative px-4 py-2 text-sm font-semibold text-white transition-all select-none hover:brightness-90 md:text-lg rounded-3xl whitespace-nowrap bg-primary">
 						Sign up
 					</button>
 				</div>
@@ -51,11 +51,11 @@ function NavBar() {
 				className={`${showMenu ? "block" : "hidden"} md:hidden bg-white`}>
 				<div
 					ref={linksRef}
-					className="flex flex-row p-3 justify-between items-center">
-					<div className="w-full flex flex-row items-center justify-between px-4 overflow-hidden">
+					className="flex flex-row items-center justify-between p-3">
+					<div className="flex flex-row items-center justify-between w-full px-4 overflow-hidden">
 						<button onClick={(e) => changeCountry(!country)} className="w-full">
-							<span className="whitespace-nowrap block">
-								<div className="text-lg font-normal text-primary flex flex-row items-center justify-between">
+							<span className="block whitespace-nowrap">
+								<div className="flex flex-row items-center justify-between text-lg font-normal text-primary">
 									<div className="flex flex-row items-center">
 										<div className="py-[2px]">
 											{country ? (
@@ -68,7 +68,9 @@ function NavBar() {
 											{`${country ? "Canada" : "United States"}`}
 										</span>
 									</div>
-									<span>Change</span>
+									<span className="transition-all hover:text-gray-500">
+										Change
+									</span>
 								</div>
 							</span>
 						</button>

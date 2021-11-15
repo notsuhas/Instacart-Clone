@@ -48,7 +48,7 @@ function Hero() {
 				<div className="flex flex-col items-center mt-12 mb-4 md:flex-row md:mt-6">
 					<div className="relative w-full md:w-auto">
 						<div className="block md:flex">
-							<div className="flex flex-col group">
+							<div className="flex flex-col group transition-all">
 								<div className="w-full rounded-xl p-4 bg-white flex flex-row items-center border-2 border-transparent h-14 md:w-[432px] focus-within:outline-none focus-within:border-black">
 									<Pin />
 									<input
@@ -56,13 +56,13 @@ function Hero() {
 										className="w-full ml-3 text-lg font-normal border-none outline-none"
 										placeholder="Enter your address"
 									/>
-									<RightArrow />
+									<RightArrow className="group-focus-within:hidden" />
 								</div>
 								<div className="flex">
 									<div className="hidden group-focus-within:block w-full absolute z-10 md:w-[432px] shadow-md rounded-xl mt-3 bg-white">
 										<ul className="block list-none">
 											<li className="rounded-b-xl">
-												<button className="flex flex-row items-center w-full p-3 text-lg font-semibold bg-white rounded-xl">
+												<button className="flex flex-row items-center w-full p-3 text-lg font-semibold bg-white hover:bg-gray-50 rounded-xl">
 													<Location />
 													<span className="ml-3">Use current location</span>
 												</button>

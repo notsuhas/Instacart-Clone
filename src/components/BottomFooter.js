@@ -49,10 +49,14 @@ function BottomFooter() {
 						<div className="flex-grow-[3] list-none pr-[5%]">
 							<ul className="flex">
 								<li className="pt-5 pr-8 text-sm font-semibold">
-									<a href="#">Terms of Use</a>
+									<a href="#" className="hover:text-gray-500 transition-all">
+										Terms of Use
+									</a>
 								</li>
 								<li className="pt-5 pr-8 text-sm font-semibold">
-									<a href="#">Privacy Policy</a>
+									<a href="#" className="hover:text-gray-500 transition-all">
+										Privacy Policy
+									</a>
 								</li>
 							</ul>
 						</div>

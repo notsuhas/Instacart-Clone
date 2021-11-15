@@ -49,7 +49,7 @@ function StoreList() {
 							});
 						}
 					}}
-					className="text-lg font-semibold outline-none mt-14 text-primary">
+					className="text-lg font-semibold outline-none mt-14 hover:text-gray-500 transition-all text-primary">
 					{showMore ? "Show less" : "Show more"}
 				</button>
 			</div>

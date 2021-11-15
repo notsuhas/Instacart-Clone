@@ -22,6 +22,7 @@
 
   - A Static Clone of the given website.
   - Mobile First and Responsive.
+  - All Components are Pure Components to my Knowledge.
   - Hosted on Netlify.
 
 - **What's NOT done ❌**
@@ -33,11 +34,14 @@
   - Although there isn't much of State Management, <br>
     the Country Switcher is not in sync with the Mobile NavBar. <br>
     ContextAPI could have been used but that would be overkill for a NavElement.
-  - All the Links are Dummy.
+  - All the Links and Buttons are Dummy.
+  - Extracting repeated Tailwind Classes into utilty components, due to time.
+  - On Switching Country, the Store Data is not changed, It's a Dummy Element.
 
 - **Extra 💡**
 
   - All Data has been properly organized in `data.js`.
+  - All Links and Buttons have hover states.
   - A Frankly better Carousel List was implemented with hover states.
   - A Kinda not so clunky Mobile Nav Country Switcher was implemented, <br>
     a bit better than requiring 4 clicks and full context takeover.
@@ -49,9 +53,9 @@
 
 ## Libraries Used
 
-    "tailwindcss"
-    "headlessui/react"
-    "tailwind-scrollbar-hide"
+    tailwindcss
+    headlessui/react
+    tailwind-scrollbar-hide
 
 This project was bootstrapped with **Create React App** and **TailwindCSS** in **JIT Mode**
 

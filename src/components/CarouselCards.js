@@ -18,7 +18,7 @@ function CarouselCards() {
 					/>
 				))}
 			</div>
-			<button className="relative max-w-[350px] md:w-full w-[85%] mx-auto mt-12 overflow-hidden text-lg font-semibold text-white bg-primary rounded-xl h-14 whitespace-nowrap hover:opacity-75">
+			<button className="relative max-w-[350px] md:w-full w-[85%] mx-auto mt-12 overflow-hidden text-lg font-semibold text-white bg-primary rounded-xl h-14 whitespace-nowrap hover:brightness-90 transition-all">
 				Start Shopping
 			</button>
 		</div>
